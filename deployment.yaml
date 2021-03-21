@@ -18,4 +18,4 @@ spec:
       - name: nodejs
         image: parvin1991/sample-nodejs-app:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
