@@ -7,7 +7,7 @@ spec:
     app: nodejs
   ports:
     - protocol: TCP
-      port: 5000
-      targetPort: 5000
-      nodeport: 4000
+      port: 80
+      targetPort: 80
+      nodeport: 31000
     type: NodePort
