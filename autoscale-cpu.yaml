@@ -1,0 +1,14 @@
+#autoscale with respect to cpu utilization
+
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nodejs-cpu-autoscale
+spec:
+  maxReplicas: 10 # maximum replicas of pods
+  minReplicas: 5
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nodejs-deployment # TARGET name of the deployment the autoscaler need to be run on
+  targetCPUUtilizationPercentage: 50 # CPU maximum amount of use on the pod is set to 30%.
